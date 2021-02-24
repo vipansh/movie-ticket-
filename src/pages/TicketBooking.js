@@ -32,7 +32,7 @@ export const TicketBooking = () => {
                         <div className="seat occupied"></div>
                         <small>Occupied</small>
                     </li>
-                </ul>ṇṇ
+                </ul>
 
                 <div className="container">
                     <div className="screen"></div>
