@@ -21,7 +21,6 @@ div.app:before {
   z-index: -1;
 }
 
-
 div.nav {
   width: 100%;
 }
@@ -435,6 +434,15 @@ div.footer-popup ul li span {
   height: 10rem;
 }
 @media only screen and (min-width: 600px) {
+  .seat:not(.occupied):hover {
+    cursor: pointer;
+    transform: scale(1.2);
+  }
+
+  .showcase .seat:not(.occupied):hover {
+    cursor: default;
+    transform: scale(1);
+  }
   div.list-item {
     width: 78%;
     margin: 4rem;
