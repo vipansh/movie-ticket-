@@ -3,6 +3,9 @@ import { MovieNameContaxt } from '../Contaxt/MovieNameContaxt'
 import { useHistory } from "react-router-dom";
 import { FaTicketAlt } from 'react-icons/fa';
 import { AiFillStar } from 'react-icons/ai';
+import { BsFillGrid3X3GapFill } from 'react-icons/bs';
+import { SelectedArrayContext } from '../Contaxt/SelectedContaxt';
+
 
 
 
@@ -10,10 +13,12 @@ import { AiFillStar } from 'react-icons/ai';
 export const ListItem = ({ data }) => {
     let history = useHistory();
     const { movieName, setmovieName } = useContext(MovieNameContaxt)
+    const { selectedArray, setSelectedArray } = useContext(SelectedArrayContext)
 
 
     const movieClicked = () => {
         setmovieName(data.name)
+        setSelectedArray('')
         history.push(`/select-ticket`);
 
 
@@ -27,7 +32,7 @@ export const ListItem = ({ data }) => {
             </div>
             <span className="movie-time-left">{data.timeAt}</span>
             <span className="book-now" onClick={movieClicked}>
-                <i className="fa fa-ticket"> <FaTicketAlt /></i>
+                <i className="fa fa-ticket"> <FaTicketAlt /> </i>
                 <div className="book-now-text">Book Now</div>
             </span>
             <div className="movie-detail">

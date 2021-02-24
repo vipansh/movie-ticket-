@@ -46,6 +46,7 @@ export const BookingPage = () => {
             setBooked(bookingdata)
 
         }
+        
 
     }
 

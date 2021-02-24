@@ -1,6 +1,7 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import "../styles/Navbar.css"
 import { ListItem } from './ListItem'
+
 export const Mainpage = () => {
 
 
@@ -49,17 +50,17 @@ export const Mainpage = () => {
         story: `A paraplegic marine dispatched to the moon Pandora on a unique mission becomes torn between following his orders and protecting the world he feels is his home.
         Avatar premiered in London on December 10, 2009, and was internationally released on December 16 and in the United States and Canada on December 18, to positive critical reviews, with critics highly praising its groundbreaking visual effects. During its theatrical run, the film broke several box office records and became the highest-grossing film of all time, as well as in the United States and Canada, surpassing Cameron's Titanic, which had held those records for twelve years. It also became the first film to gross more than $2 billion and the best-selling film of 2010 in the United States.`
     }
+
     ]
 
 
     return (
         <div>
             <div className="container">
-
                 <div className="app">
                     <div className="nav">
-                        <div className="nav-top">
-                            <i className="fa fa-bars"></i><i className="fa fa-film"></i><i className="fa fa-search"></i>
+                        <div className="nav-top" >
+
                         </div>
                         <ul>
                             <li className="active">Today</li>

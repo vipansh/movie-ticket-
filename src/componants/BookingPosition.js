@@ -40,7 +40,6 @@ export const BookingPosition = ({ match, row, position }) => {
                     bookeAndAccupied.push(...element.seatbooked)
                 });
             }
-            console.log(bookeAndAccupied)
             if (bookeAndAccupied.includes(seatPosition)) {
                 setSeatOccupied(true)
             }
@@ -54,21 +53,27 @@ export const BookingPosition = ({ match, row, position }) => {
 
     const addPosition = () => {
 
-        if (selectedArray.includes(seatPosition)) {
-
-            let newarray = selectedArray.filter(data => data !== seatPosition)
-            setSelectedArray(newarray)
-            setSeatSelected(false)
+        if (seatOccupied) {
+            console.log("seat occupid")
         }
 
         else {
-            setSelectedArray((selectedArray => {
-                return [...selectedArray, seatPosition]
-            }))
-            setSeatSelected(true)
+            if (selectedArray.includes(seatPosition)) {
+
+                let newarray = selectedArray.filter(data => data !== seatPosition)
+                setSelectedArray(newarray)
+                setSeatSelected(false)
+            }
+
+            else {
+                setSelectedArray((selectedArray => {
+                    return [...selectedArray, seatPosition]
+                }))
+                setSeatSelected(true)
+
+            }
 
         }
-
     }
 
 
