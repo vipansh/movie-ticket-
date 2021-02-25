@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { BookedContaxt } from '../Contaxt/BookedContext'
 import "../styles/Myticket.css"
@@ -6,10 +6,19 @@ export const MyBookedTickets = () => {
 
     const { booked, setBooked } = useContext(BookedContaxt)
 
-    console.log(booked)
+    const [showMsg, setShowMsg] = useState()
+    useEffect(() => {
+        setShowMsg(true)
+        setTimeout(() => {
+            setShowMsg(false)
+
+        }, 5000);
+    }, [])
 
     return (
         <div class="cardWrap">
+            {showMsg ? <div className="msg animate slide-in-down msg-success active">Great job! Movie Booked </div> : ""}
+
             <div className="my-book-ticket-link"><Link to="/" >Back to home</Link></div>
 
             {booked.map((data, i) => {
