@@ -1,0 +1,21 @@
+.ticket-card {
+  width: 80%;
+  margin: 2rem auto;
+  padding: 1rem 3rem;
+  border: 2px dotted skyblue;
+  color: aliceblue;
+}
+
+.ticket-card h1 {
+  margin: 1rem;
+  text-align: center;
+}
+.ticket-card p {
+  margin: 1rem;
+  padding: 1rem;
+}
+
+.cardWrap ul li {
+  list-style: none;
+  margin: 0.5rem 0;
+}

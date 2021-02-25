@@ -14,6 +14,7 @@ import {
 } from "react-router-dom";
 import { BookingPage } from './pages/BookingPage';
 import { BookedProvider } from './Contaxt/BookedContext';
+import { MyBookedTickets } from './pages/MyBookedTickets';
 
 
 function App() {
@@ -30,6 +31,8 @@ function App() {
                     <Route path="/" exact component={Homepage} />
                     <Route path="/select-ticket" exact component={TicketBooking} />
                     <Route path="/bookingPage/:name" exact component={BookingPage} />
+                    <Route path="/my-booked-tickets" exact component={MyBookedTickets} />
+
                   </Switch>
                 </BookedProvider>
               </AccupiedProvider>

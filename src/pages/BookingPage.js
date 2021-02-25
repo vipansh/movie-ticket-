@@ -46,7 +46,7 @@ export const BookingPage = () => {
             setBooked(bookingdata)
 
         }
-        
+
 
     }
 
@@ -91,8 +91,8 @@ export const BookingPage = () => {
                 )}
 
 
-                <div className="home-link" onClick={removeSelected}><Link to="/">Back to home</Link></div>
-                <div className="confirm-button" onClick={confirmTicket}><Link to="/">Confirm And Book Ticket</Link></div>
+                <div className="book-ticket-link home-link" onClick={removeSelected}><Link to="/">👈🏻Back to home</Link></div>\
+                <div className="book-ticket-link confirm-button " onClick={confirmTicket}><Link to="/my-booked-tickets">Confirm And Book Ticket</Link></div>
             </div>
         )
 

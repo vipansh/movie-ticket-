@@ -507,3 +507,17 @@ div.footer-popup ul li span {
     margin: 1rem;
   }
 }
+
+.booking-ticket-button {
+  position: absolute;
+  bottom: 17px;
+  right: 13px;
+}
+
+.booking-ticket-button a {
+  text-decoration: none;
+  background: rgba(14, 11, 41, 0.781);
+  border-radius: 1rem;
+  padding: 0.5rem 0.2rem;
+  color: #fff;
+}
