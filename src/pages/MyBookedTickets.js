@@ -1,4 +1,5 @@
 import React, { useContext } from 'react'
+import { Link } from 'react-router-dom'
 import { BookedContaxt } from '../Contaxt/BookedContext'
 import "../styles/Myticket.css"
 export const MyBookedTickets = () => {
@@ -9,6 +10,8 @@ export const MyBookedTickets = () => {
 
     return (
         <div class="cardWrap">
+            <div className="my-book-ticket-link"><Link to="/" >Back to home</Link></div>
+
             {booked.map((data, i) => {
                 return <div key={i} className="ticket-card">
 
@@ -27,7 +30,7 @@ export const MyBookedTickets = () => {
                         </ul>
 
                         <span class="price">
-                            Amount :     ${100 * data.seatbooked.length}
+                            Amount :     ₹{100 * data.seatbooked.length}
                         </span>
 
 

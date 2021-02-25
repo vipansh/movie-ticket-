@@ -11,8 +11,8 @@ const Homepage = () => {
     return (
         <div>
             <Mainpage />
-            {}
-            <BookingButton />
+            {booked.length > 0 ? <BookingButton /> : ""}
+
         </div>
     )
 }

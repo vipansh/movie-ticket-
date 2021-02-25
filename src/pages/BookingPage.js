@@ -79,7 +79,7 @@ export const BookingPage = () => {
                                     </ul>
 
                                     <span href="" class="price">
-                                        $100
+                                    ₹100
 			</span>
 
                                 </div>

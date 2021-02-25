@@ -12,7 +12,7 @@ const TotalSeat = () => {
         return (
             <div className="text-total">
                 You have selected <span id="count">{selectedArray.length}</span> seats for a total price of
-                <span id="total">${selectedArray.length * 100}</span>
+                <span id="total">₹{selectedArray.length * 100}</span>
             </div>
         )
     }
