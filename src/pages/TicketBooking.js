@@ -2,13 +2,13 @@ import React, { useContext } from 'react'
 import { BookingRow } from '../componants/BookingRow';
 import BookTicket from '../componants/BookTicket';
 import TotalSeat from '../componants/TotalSeat';
-import { MovieNameContaxt } from '../Contaxt/MovieNameContaxt';
+import { MovieNameContext } from '../Context/MovieNameContext';
 import "../styles/TicketBooking.css"
 import { Route, Redirect } from "react-router-dom";
 
 export const TicketBooking = () => {
 
-    const { movieName, setmovieName } = useContext(MovieNameContaxt)
+    const { movieName, setmovieName } = useContext(MovieNameContext)
 
     const getId = (e) => {
         let Row = e.target.id;
@@ -45,7 +45,7 @@ export const TicketBooking = () => {
                         <BookingRow id="F" />
                     </div>
                 </div>
-                
+
                 <center>
 
                     <TotalSeat />

@@ -1,19 +1,19 @@
 import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
-import { AccupiedContext } from '../Contaxt/AccupiedContaxt'
-import { MovieNameContaxt } from '../Contaxt/MovieNameContaxt'
-import { SelectedArrayContext } from '../Contaxt/SelectedContaxt'
+import { OccupiedContext } from '../Context/OccupiedContext'
+import { MovieNameContext } from '../Context/MovieNameContext'
+import { SelectedArrayContext } from '../Context/SelectedContext'
 import "../styles/BookingPage.css"
 import { Route, Redirect } from "react-router-dom";
-import { BookedContaxt } from '../Contaxt/BookedContext'
+import { BookedContext } from '../Context/BookedContext'
 export const BookingPage = () => {
 
 
     const { selectedArray, setSelectedArray } = useContext(SelectedArrayContext)
-    const { Accupied, setAccupied } = useContext(AccupiedContext)
-    const { movieName, setmovieName } = useContext(MovieNameContaxt)
+    const { Occupied, setOccupied } = useContext(OccupiedContext)
+    const { movieName, setmovieName } = useContext(MovieNameContext)
 
-    const { booked, setBooked } = useContext(BookedContaxt)
+    const { booked, setBooked } = useContext(BookedContext)
 
 
     const removeSelected = () => {
@@ -79,7 +79,7 @@ export const BookingPage = () => {
                                     </ul>
 
                                     <span href="" class="price">
-                                    ₹100
+                                        ₹100
 			</span>
 
                                 </div>

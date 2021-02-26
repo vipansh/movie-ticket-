@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-export const BookedContaxt = React.createContext();
+export const BookedContext = React.createContext();
 
 export const BookedProvider = ({ children }) => {
 
@@ -8,9 +8,9 @@ export const BookedProvider = ({ children }) => {
     const [booked, setBooked] = useState([])
 
     useEffect(() => {
-        let accupiedArray = JSON.parse(localStorage.getItem("user"))
-        if (accupiedArray) {
-            setBooked(accupiedArray)
+        let OccupiedArray = JSON.parse(localStorage.getItem("user"))
+        if (OccupiedArray) {
+            setBooked(OccupiedArray)
         }
     }, [])
 
@@ -24,9 +24,9 @@ export const BookedProvider = ({ children }) => {
 
 
     return (
-        <BookedContaxt.Provider
+        <BookedContext.Provider
             value={{ booked, setBooked }}>
             {children}
-        </BookedContaxt.Provider>
+        </BookedContext.Provider>
     );
 };

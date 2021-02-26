@@ -1,10 +1,10 @@
 import React, { useContext, useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { BookedContaxt } from '../Contaxt/BookedContext'
+import { BookedContext } from '../Context/BookedContext'
 import "../styles/Myticket.css"
 export const MyBookedTickets = () => {
 
-    const { booked, setBooked } = useContext(BookedContaxt)
+    const { booked, setBooked } = useContext(BookedContext)
 
     const [showMsg, setShowMsg] = useState()
     useEffect(() => {

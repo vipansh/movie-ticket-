@@ -1,11 +1,11 @@
 import React, { useContext } from 'react'
 import { BookingButton } from '../componants/BookingButton'
 import { Mainpage } from '../componants/Mainpage'
-import { BookedContaxt } from '../Contaxt/BookedContext'
+import { BookedContext } from '../Context/BookedContext'
 
 const Homepage = () => {
 
-    const { booked, setBooked } = useContext(BookedContaxt)
+    const { booked, setBooked } = useContext(BookedContext)
     console.log(booked.length)
 
     return (

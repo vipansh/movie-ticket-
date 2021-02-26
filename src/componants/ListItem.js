@@ -1,10 +1,10 @@
 import React, { useContext } from 'react'
-import { MovieNameContaxt } from '../Contaxt/MovieNameContaxt'
+import { MovieNameContext } from '../Context/MovieNameContext'
 import { useHistory } from "react-router-dom";
 import { FaTicketAlt } from 'react-icons/fa';
 import { AiFillStar } from 'react-icons/ai';
 import { BsFillGrid3X3GapFill } from 'react-icons/bs';
-import { SelectedArrayContext } from '../Contaxt/SelectedContaxt';
+import { SelectedArrayContext } from '../Context/SelectedContext';
 
 
 
@@ -12,7 +12,7 @@ import { SelectedArrayContext } from '../Contaxt/SelectedContaxt';
 
 export const ListItem = ({ data }) => {
     let history = useHistory();
-    const { movieName, setmovieName } = useContext(MovieNameContaxt)
+    const { movieName, setmovieName } = useContext(MovieNameContext)
     const { selectedArray, setSelectedArray } = useContext(SelectedArrayContext)
 
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import { SelectedArrayContext } from '../Contaxt/SelectedContaxt'
+import { SelectedArrayContext } from '../Context/SelectedContext'
 
 const TotalSeat = () => {
 

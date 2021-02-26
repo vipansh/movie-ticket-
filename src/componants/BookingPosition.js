@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useContext } from 'react'
-import { AccupiedContext } from '../Contaxt/AccupiedContaxt'
-import { SelectedArrayContext } from '../Contaxt/SelectedContaxt'
+import { OccupiedContext } from '../Context/OccupiedContext'
+import { SelectedArrayContext } from '../Context/SelectedContext'
 import { useParams } from "react-router-dom";
-import { MovieNameContaxt } from '../Contaxt/MovieNameContaxt';
+import { MovieNameContext } from '../Context/MovieNameContext';
 export const BookingPosition = ({ match, row, position }) => {
 
     let { name } = useParams()
@@ -14,33 +14,33 @@ export const BookingPosition = ({ match, row, position }) => {
 
 
     const { selectedArray, setSelectedArray } = useContext(SelectedArrayContext)
-    const { Accupied, setAccupied } = useContext(AccupiedContext)
-    const { movieName, setmovieName } = useContext(MovieNameContaxt)
+    const { Occupied, setOccupied } = useContext(OccupiedContext)
+    const { movieName, setmovieName } = useContext(MovieNameContext)
 
 
 
     useEffect(() => {
-        if (Accupied.includes(seatPosition)) {
+        if (Occupied.includes(seatPosition)) {
             setSeatOccupied(true)
         }
 
 
 
-        let accupiedSeat = JSON.parse(localStorage.getItem("user"))
-        if (accupiedSeat) {
+        let OccupiedSeat = JSON.parse(localStorage.getItem("user"))
+        if (OccupiedSeat) {
 
 
-            const thisarray = accupiedSeat.filter(data => {
+            const thisarray = OccupiedSeat.filter(data => {
                 return data.name === movieName
             })
 
-            let bookeAndAccupied = []
+            let bookeAndOccupied = []
             if (thisarray) {
                 thisarray.forEach(element => {
-                    bookeAndAccupied.push(...element.seatbooked)
+                    bookeAndOccupied.push(...element.seatbooked)
                 });
             }
-            if (bookeAndAccupied.includes(seatPosition)) {
+            if (bookeAndOccupied.includes(seatPosition)) {
                 setSeatOccupied(true)
             }
         }

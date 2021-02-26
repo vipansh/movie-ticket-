@@ -1,11 +1,11 @@
 import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
-import { MovieNameContaxt } from '../Contaxt/MovieNameContaxt'
-import { SelectedArrayContext } from '../Contaxt/SelectedContaxt'
+import { MovieNameContext } from '../Context/MovieNameContext'
+import { SelectedArrayContext } from '../Context/SelectedContext'
 import { BiCameraMovie } from 'react-icons/bi';
 const BookTicket = (props) => {
 
-    const { movieName, setmovieName } = useContext(MovieNameContaxt)
+    const { movieName, setmovieName } = useContext(MovieNameContext)
     const { selectedArray, setSelectedArray } = useContext(SelectedArrayContext)
 
     if (selectedArray.length > 0) {

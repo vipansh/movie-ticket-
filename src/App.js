@@ -1,7 +1,7 @@
 import './App.css';
-import { AccupiedProvider } from './Contaxt/AccupiedContaxt';
-import { SelectedArrayProvider } from './Contaxt/SelectedContaxt';
-import { MovieNameProvider } from './Contaxt/MovieNameContaxt';
+import { OccupiedProvider } from './Context/OccupiedContext';
+import { SelectedArrayProvider } from './Context/SelectedContext';
+import { MovieNameProvider } from './Context/MovieNameContext';
 
 import Homepage from './pages/Homepage';
 import { TicketBooking } from './pages/TicketBooking';
@@ -13,7 +13,7 @@ import {
   Link
 } from "react-router-dom";
 import { BookingPage } from './pages/BookingPage';
-import { BookedProvider } from './Contaxt/BookedContext';
+import { BookedProvider } from './Context/BookedContext';
 import { MyBookedTickets } from './pages/MyBookedTickets';
 
 
@@ -21,10 +21,10 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <AccupiedProvider>
+        <OccupiedProvider>
           <MovieNameProvider>
             <SelectedArrayProvider>
-              <AccupiedProvider>
+              <OccupiedProvider>
                 <BookedProvider>
 
                   <Switch>
@@ -35,10 +35,10 @@ function App() {
 
                   </Switch>
                 </BookedProvider>
-              </AccupiedProvider>
+              </OccupiedProvider>
             </SelectedArrayProvider>
           </MovieNameProvider>
-        </AccupiedProvider>
+        </OccupiedProvider>
       </div>
     </Router>
 
