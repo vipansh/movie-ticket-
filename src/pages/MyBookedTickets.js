@@ -12,7 +12,7 @@ export const MyBookedTickets = () => {
         setTimeout(() => {
             setShowMsg(false)
 
-        }, 5000);
+        }, 3000);
     }, [])
 
     return (
@@ -30,13 +30,15 @@ export const MyBookedTickets = () => {
 
 
 
-                        <ul>
-                            <span>Seat No:</span>
-                            <li className="seat-no">
-                                {data.seatbooked}
-                            </li>
+                        <div>
+                            <div>Seat No:</div>
+                            <p className="seat-no">
+                                {data.seatbooked.map(data => {
+                                    return <span>{data} </span>
+                                })}
+                            </p>
 
-                        </ul>
+                        </div>
 
                         <span class="price">
                             Amount :     ₹{100 * data.seatbooked.length}

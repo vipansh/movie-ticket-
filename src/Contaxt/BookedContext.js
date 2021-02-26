@@ -8,8 +8,10 @@ export const BookedProvider = ({ children }) => {
     const [booked, setBooked] = useState([])
 
     useEffect(() => {
-    let    accupiedArray = JSON.parse(localStorage.getItem("user"))
-        setBooked(accupiedArray)
+        let accupiedArray = JSON.parse(localStorage.getItem("user"))
+        if (accupiedArray) {
+            setBooked(accupiedArray)
+        }
     }, [])
 
 
